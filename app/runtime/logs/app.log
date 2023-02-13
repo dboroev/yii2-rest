@@ -1,0 +1,192 @@
+2023-02-13 20:29:18 [-][-][-][error][yii\db\Exception] PDOException: could not find driver in /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php:712
+Stack trace:
+#0 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(712): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#3 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#6 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /var/www/html/app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/html/app/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/html/app/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#18 /var/www/html/app/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#19 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#20 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#21 /var/www/html/app/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /var/www/html/app/yii(20): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: could not find driver in /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#1 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#4 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /var/www/html/app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/html/app/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/html/app/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#16 /var/www/html/app/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#17 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#18 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#19 /var/www/html/app/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /var/www/html/app/yii(20): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2023-02-13 20:29:18 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'f6eb93f098e2'
+    'PHP_VERSION' => '8.0.27'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PWD' => '/var/www/html/app'
+    'HOME' => '/root'
+    'PHP_SHA256' => 'f942cbfe2f7bacbb8039fb79bbec41c76ea779ac5c8157f21e1e0c1b28a5fc3a'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'TERM' => 'xterm'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.27.tar.xz'
+    'SHLVL' => '1'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.27.tar.xz.asc'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    '_' => '/usr/local/bin/php'
+    'OLDPWD' => '/var/www/html'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1676316558.2909
+    'REQUEST_TIME' => 1676316558
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2023-02-13 20:34:24 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php:712
+Stack trace:
+#0 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(712): PDO->__construct('mysql:host=db;d...', 'dbuser', 'dbpwd', NULL)
+#1 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#3 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#6 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /var/www/html/app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /var/www/html/app/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#17 /var/www/html/app/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#18 /var/www/html/app/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#19 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#20 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#21 /var/www/html/app/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /var/www/html/app/yii(20): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] Connection refused in /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#1 /var/www/html/app/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#4 /var/www/html/app/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /var/www/html/app/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /var/www/html/app/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /var/www/html/app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /var/www/html/app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/html/app/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/html/app/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#16 /var/www/html/app/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#17 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#18 /var/www/html/app/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#19 /var/www/html/app/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /var/www/html/app/yii(20): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => Connection refused
+)
+
+2023-02-13 20:34:24 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'dd3f77743063'
+    'PHP_VERSION' => '8.0.27'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PWD' => '/var/www/html/app'
+    'HOME' => '/root'
+    'PHP_SHA256' => 'f942cbfe2f7bacbb8039fb79bbec41c76ea779ac5c8157f21e1e0c1b28a5fc3a'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'TERM' => 'xterm'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.27.tar.xz'
+    'SHLVL' => '1'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.27.tar.xz.asc'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'OLDPWD' => '/var/www/html'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1676316864.8053
+    'REQUEST_TIME' => 1676316864
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
